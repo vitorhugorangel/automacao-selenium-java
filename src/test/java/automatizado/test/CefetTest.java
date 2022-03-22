@@ -1,7 +1,5 @@
 package automatizado.test;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;

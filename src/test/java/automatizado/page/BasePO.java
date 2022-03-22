@@ -10,24 +10,25 @@ import org.openqa.selenium.support.PageFactory;
  * Toda as pages devem ser herdadas desta classe.
  */
 public abstract class BasePO {
-  /**Driver base que será usado pelas pages */
-  protected WebDriver driver;
+  /** Driver base que será usado pelas pages */
+  protected static WebDriver driver;
 
   /**
    * Construtor base para criação da fabrica de elementos (PageFactory).
-   * @param driver  Driver da página atual.
+   * 
+   * @param driver Driver da página atual.
    */
   public BasePO(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
   }
 
-  /**Método que retorna titulo da página atual */
+  /** Método que retorna titulo da página atual */
   public String obterTituloPagina() {
     return driver.getTitle();
   }
 
-  /**Método para escrever em WebElements do  tipo input */
+  /** Método para escrever em WebElements do tipo input */
   public void escrever(WebElement input, String texto) {
     input.clear();
     input.sendKeys(texto + Keys.TAB);

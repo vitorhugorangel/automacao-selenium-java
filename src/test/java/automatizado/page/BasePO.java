@@ -19,7 +19,7 @@ public abstract class BasePO {
    * @param driver Driver da página atual.
    */
   public BasePO(WebDriver driver) {
-    this.driver = driver;
+    BasePO.driver = driver;
     PageFactory.initElements(driver, this);
   }
 

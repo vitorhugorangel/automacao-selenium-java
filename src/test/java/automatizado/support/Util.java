@@ -10,7 +10,6 @@ import automatizado.page.BasePO;
 public class Util extends BasePO {
     public Util(WebDriver driver) {
         super(driver);
-        // TODO Auto-generated constructor stub
     }
 
     public void awaitElementByClicked(By element, int tempo) {
